@@ -1,29 +1,115 @@
-Crime Detection using Machine Learning and web3
+```markdown
+# Crime Detection using Machine Learning and Web3
+> Revolutionizing public safety with real-time crime detection and decentralized data storage.
 
-Crime Detection using Machine Learning and web3 is a project that aims to detect criminal activities in video footage using machine learning techniques and store the information in a decentralized manner using web3 technologies.
-Installation
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Stars](https://img.shields.io/github/stars/AkhilAndroid/Crime-Detection-using-Machine-Learning.svg)
 
-    Clone the repository:git clone https://github.com/AkhilAndroid/Crime-Detection-using-Machine-Learning/
-                         cd Crime-Detection-using-Machine-Learning-and-web3
+## Overview
+The Crime Detection using Machine Learning and Web3 project is an advanced CCTV solution designed to enhance public safety by detecting criminal activities in video footage using cutting-edge machine learning techniques. By leveraging Web3 technologies, the project ensures that detected information is stored securely and in a decentralized manner, addressing the limitations of traditional CCTV systems that often rely on human intervention.
 
-Install the dependencies:
+## Architecture & Workflow
 
-    pip install -r req.txt
+The system architecture integrates machine learning for video analysis and Web3 for decentralized data storage. The workflow involves capturing video frames, processing them through a pre-trained model, and storing the results on a decentralized platform.
 
-    Download the pre-trained models and video from Google Drive.  https://drive.google.com/drive/folders/1GnrMkLj3EDy5-Vk7SnF-gqQes6hJJNpg?usp=share_link
-     Extract the files and place them in the root directory of the project.
+```mermaid
+sequenceDiagram
+    participant User
+    participant WebInterface
+    participant Server
+    participant MLModel
+    participant Web3Storage
 
-    Open the project in Chrome browser and use http://127.0.0.1:8000/api as the API endpoint.
+    User->>WebInterface: Upload Video
+    WebInterface->>Server: Send Video Data
+    Server->>MLModel: Process Video Frames
+    MLModel->>Server: Return Predictions
+    Server->>WebInterface: Display Results
+    Server->>Web3Storage: Store Detection Data
+```
 
-Usage
+## Granular Tech Stack
+- **Languages**: Python
+- **Frameworks**: Django
+- **Libraries**: OpenCV, PIL, PyTorch, Transformers
+- **Tools**: ImageIO, Requests
+- **Technologies**: Web3, Decentralized Storage
 
-    Run the following command to start the server:
+## Key Features
+- Real-time video analysis for crime detection.
+- Decentralized storage of detection data using Web3.
+- User-friendly web interface for video upload and results display.
+- High accuracy through pre-trained machine learning models.
 
-    python manage.py runserver
+## Project Structure
+```
+Crime-Detection-using-Machine-Learning/
+├── .idea/
+├── cctv_server/
+│   ├── __init__.py
+│   ├── asgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── imagesend/
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py
+│   ├── serializers.py
+│   ├── urls.py
+│   └── views.py
+├── models--google--vit-base-patch16-224/
+├── main.py
+├── manage.py
+├── config.json
+└── db.sqlite3
+```
 
-    Open http://127.0.0.1:8000 in Chrome browser to access the web interface.
+## Getting Started
 
-    Upload a video file to the web interface and click on the "Detect" button to detect criminal activities in the video.
+### Prerequisites
+- Python 3.x
+- pip
 
-    The detected criminal activities are displayed on the web interface, and the information is stored in a decentralized manner using web3 technologies.
+### Installation
+```bash
+# Clone the repository
+git clone https://github.com/AkhilAndroid/Crime-Detection-using-Machine-Learning.git
+cd Crime-Detection-using-Machine-Learning
 
+# Install the dependencies
+pip install -r req.txt
+
+# Download pre-trained models and videos
+# Extract them to the root directory
+```
+
+### Running the project
+```bash
+# Start the Django server
+python manage.py runserver
+
+# Access the web interface
+# Open http://127.0.0.1:8000 in your browser
+```
+
+## Usage
+1. Open the web interface in your browser.
+2. Upload a video file.
+3. Click the "Detect" button to start crime detection.
+4. View detected activities on the interface.
+5. Data is securely stored using Web3 technologies.
+
+## Roadmap
+- Integration of additional machine learning models for improved accuracy.
+- Expansion to support additional video formats and sources.
+- Enhanced user interface features for better user experience.
+- Implementation of real-time notifications for detected activities.
+
+## Contributing
+Contributions are welcome! Please fork the repository and submit a pull request for any enhancements or bug fixes.
+
+## License
+This project is licensed under the MIT License.
+```
