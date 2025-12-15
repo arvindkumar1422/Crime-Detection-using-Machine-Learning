@@ -1,5 +1,4 @@
-```markdown
-# Crime Detection using Machine Learning and Web3
+## Crime Detection using Machine Learning and Web3
 > Revolutionizing public safety with real-time crime detection and decentralized data storage.
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
